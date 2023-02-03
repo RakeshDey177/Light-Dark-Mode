@@ -1,0 +1,173 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color:#fff;
+    --text-color:#555;
+    --title-color:#000;
+}
+
+.dark-theme{
+    --background-color:#000;
+    --text-color:#999;
+    --title-color:#fff;
+}
+
+body{
+    background: var(--background-color);
+    color:var(--text-color);
+    height: 100vh;
+    transition:2s linear;
+}
+
+.header{
+    width:100%;
+    height: 80px;
+    padding:0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 0;
+}
+
+.logo img{
+    width:70px;
+}
+
+nav ul{
+    width:100%;
+    text-align: right;
+    list-style: none;
+    margin:25px
+}
+
+nav ul li{
+    display: inline-block;
+    margin:0px 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.toggle-btn{
+    background: #4864ff;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:150px;
+    height:40px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.toggle-btn img{
+    width:40px;
+    padding-left: 15px;
+}
+
+.content{
+    margin-top:10%;
+    width: 100vh;
+   
+    display: flex;
+    align-items: center; 
+    margin-left:50px
+}
+
+.content .data{
+    margin-left: 10%;
+}
+
+.content h1{
+    font-size: 80px;
+    font-family: serif;
+    color: var(--title-color);
+    font-weight: 600;
+    position: relative;
+}
+
+.content p{
+    color:var(--text-color)
+}
+
+.content a{
+    position: absolute;
+    background: #4864ff;
+    color:#fff;
+    padding:10px 50px;
+    margin-top: 30px;
+    border-radius: 30px;
+    cursor:pointer;
+    text-decoration: none;
+    
+}
+
+.image-box{
+    position:absolute;
+    bottom :20%;
+    right:20%
+}
+
+.image-box img{
+    width:500px;
+    display: block;
+}
+
+.pattern{
+    position: absolute;
+    top:0;
+    left:50%;
+    display: flex;
+    transform: rotate(40deg);
+    z-index: -1;
+}
+
+.pattern img{
+    width:450px;
+    position: absolute;
+    top:10px;
+    left:420px;
+    animation:move 1s linear infinite;
+}
+
+.pattern img:nth-child(1)
+{
+    transform:rotate(-45deg) translate(-70px,-50px);
+    animation-delay: 0.5s;
+}
+
+.pattern img:nth-child(2)
+{
+    transform:rotate(65deg) translate(0px,-40px);
+    animation-delay: 1.5s;
+
+}
+
+@keyframes move {
+    100%{
+        margin-left: 40px;
+        margin-top:20px;
+        opacity: 0.4;
+    }
+}
+
+@media only screen and (max-width:1650px) {
+    .image-box{
+        right:10%;
+    }
+    .pattern img{
+        left:450px;
+    }
+}
